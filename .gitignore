@@ -1,0 +1,242 @@
+# Binaries for built projects
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# User-specific files
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]uild/
+[Oo]utput/
+
+# NuGet Packages
+*.nupkg
+packages/
+
+# IDE files
+.idea/
+*.sln.iml
+*.ipr
+*.iws
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Test results
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+
+# Coverage files
+*.coverage
+*.coveralls.json
+
+# Project files
+*.csproj.user
+*.userosscache
+
+# Environment files
+appsettings.Development.json
+appsettings.*.json
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio cache files
+ipch/
+*.ipch
+*.aps
+*.pch
+*.pdb
+*.idb
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cache
+*.VC.db
+*.VC.VC.opendb
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.vbs
+Thumbs.db:encryptable
+ehthumbs_vista.db
+ehthumbs_vista.db:encryptable
+
+# Mac OS X files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux files
+*~
+*.swp
+*.swo
+
+# Editor files
+.*.swp
+.*.swo
+*.swp
+*.swo
+*.un~
+*.bak
+*.old
+*.orig
+*.rej
+
+# Build output
+[Bb]uild/
+[Oo]utput/
+[Dd]ist/
+[Rr]elease/
+[Dd]ebug/
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Test results
+[Tt]est[Rr]esult*
+[Tt]est*.xml
+*.trx
+*.coverage
+
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# Environment files
+appsettings.*.json
+appsettings.json
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.*.swp
+.*.swo
+*.swp
+*.swo
+*.un~
+*.bak
+*.old
+*.orig
+*.rej
+
+# Build output
+[Bb]uild/
+[Oo]utput/
+[Dd]ist/
+[Rr]elease/
+[Dd]ebug/
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Test results
+[Tt]est[Rr]esult*
+[Tt]est*.xml
+*.trx
+*.coverage
+
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# Environment files
+appsettings.*.json
+appsettings.json
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.*.swp
+.*.swo
+*.swp
+*.swo
+*.un~
+*.bak
+*.old
+*.orig
+*.rej
+/Crawler.Presentation/Keys/public_key.pem

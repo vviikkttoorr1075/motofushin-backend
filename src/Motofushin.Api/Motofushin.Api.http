@@ -1,0 +1,17 @@
+@motofushin_backend_HostAddress = http://localhost:5044
+
+GET {{motofushin_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{motofushin_backend_HostAddress}}/gpx
+Accept: application/json
+
+###
+
+GET {{motofushin_backend_HostAddress}}/gpx/obtropa.gpx
+Accept: application/gpx+xml
+
+###
+
