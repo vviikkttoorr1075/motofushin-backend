@@ -14,9 +14,9 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["motofushin-backend.sln", "./"]
 COPY ["src/motofushin-backend/motofushin-backend.csproj", "src/motofushin-backend/"]
-COPY ["src/Motofushin.App.Domain/Motofushin.App.Domain.csproj", "src/Motofushin.App.Domain/"]
-COPY ["src/Motofushin.App/Motofushin.App.Api/Motofushin.App.Application.csproj", "src/Motofushin.App/Motofushin.App.Api/"]
-COPY ["src/Motofushin.App/Motofushin.App.Infrastructure/Motofushin.App.Infrastructure.csproj", "src/Motofushin.App/Motofushin.App.Infrastructure/"]
+COPY ["src/Motofushin.Roadmap.Domain/Motofushin.Roadmap.Domain.csproj", "src/Motofushin.Roadmap.Domain/"]
+COPY ["src/Motofushin.Roadmap/Motofushin.Roadmap.Api/Motofushin.Roadmap.Application.csproj", "src/Motofushin.Roadmap/Motofushin.Roadmap.Api/"]
+COPY ["src/Motofushin.Roadmap/Motofushin.Roadmap.Infrastructure/Motofushin.Roadmap.Infrastructure.csproj", "src/Motofushin.Roadmap/Motofushin.Roadmap.Infrastructure/"]
 RUN dotnet restore "./motofushin-backend.sln"
 COPY . .
 WORKDIR "/src/src/motofushin-backend"

@@ -1,0 +1,34 @@
+# Сборка
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Пакеты
+packages/
+*.nupkg
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.cache
+
+# Сгенерированный код (если есть)
+**/Generated/
+**/*.g.cs
+**/*.g.i.cs
+**/*.designer.cs
+
+# Данные и бинарники
+*.dll
+*.exe
+*.pdb
+*.mdf
+*.ldf

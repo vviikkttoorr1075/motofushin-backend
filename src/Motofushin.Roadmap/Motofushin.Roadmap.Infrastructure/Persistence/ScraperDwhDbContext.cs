@@ -67,16 +67,22 @@ public class ScraperDwhDbContext : DbContext
 
 		builder.HasKey(p => new { p.Id, p.Seq });
 
-		builder.Property(p => p.Lat)
-			.IsRequired()
-			.HasColumnType("numeric(9,6)");
+		builder.ComplexProperty(p => p.Position, position =>
+		{
+			position.Property(c => c.Lat)
+				.HasColumnName("Lat")
+				.IsRequired()
+				.HasColumnType("numeric(9,6)");
 
-		builder.Property(p => p.Lon)
-			.IsRequired()
-			.HasColumnType("numeric(9,6)");
+			position.Property(c => c.Lon)
+				.HasColumnName("Lon")
+				.IsRequired()
+				.HasColumnType("numeric(9,6)");
 
-		builder.Property(p => p.ElevationM)
-			.HasColumnType("numeric(7,1)");
+			position.Property(c => c.ElevationM)
+				.HasColumnName("ElevationM")
+				.HasColumnType("numeric(7,1)");
+		});
 
 		builder.Property(p => p.RecordedAt)
 			.HasColumnType("timestamptz");

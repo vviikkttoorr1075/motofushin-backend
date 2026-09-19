@@ -1,3 +1,5 @@
+using Motofushin.Roadmap.Domain.DimRoute.ValueObjects;
+
 namespace Motofushin.Roadmap.Domain.DimRoute.Entities;
 
 /// <summary>
@@ -11,12 +13,7 @@ public interface IRoutePoint
 
     int Seq { get; set; }
 
-    decimal Lat { get; set; }
-
-    decimal Lon { get; set; }
-
-    //Высота точки над уровнем моря в метрах
-    decimal? ElevationM { get; set; }
+    GeoPoint Position { get; set; }
 
     DateTimeOffset? RecordedAt { get; set; }
 }
