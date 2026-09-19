@@ -19,6 +19,7 @@ public class DimRouteRepository(ScraperDwhDbContext context) : IDimRouteReposito
 	public async Task<IDimRoute?> GetByIdAsync(int id, CancellationToken cancellationToken = default) =>
 		await context.DimRoutes
 			.AsNoTracking()
+			.Include(r => r.Points)
 			.SingleOrDefaultAsync(r => r.Id == id, cancellationToken);
 
 	public async Task<IDimRoute?> GetWithPointsByIdAsync(int id, CancellationToken cancellationToken = default) =>

@@ -1,8 +1,7 @@
-
-using Motofushin.Roadmap.Application.Features.Gpx;
+using Motofushin.Roadmap.Application.Features.DimRoute;
 using Motofushin.Roadmap.Infrastructure.DependencyInjection;
 
-namespace Motofushin.Roadmap.Api
+namespace Motofushin.Api
 {
 	public class Program
 	{
@@ -32,30 +31,28 @@ namespace Motofushin.Roadmap.Api
 
 			app.MapControllers();
 
-			app.MapGet("/gpx", async Task<IResult> (
-				IGpxTrackStore store,
-				CancellationToken ct) =>
-				{
-					var names = await store.GetNamesAsync(ct);
-					return names is null
-						? TypedResults.NotFound("GPX directory not found.")
-						: TypedResults.Ok(names);
-				})
-			.WithName("GetGpxTracks");
+			app.MapGet("/routes/geojson", async Task<IResult> (
+			IDimRouteGeoJsonService service,
+			CancellationToken ct) =>
+			{
+				var documents = await service.GetAllAsync(ct);
+				return TypedResults.Ok(documents);
+			})
+			.WithName("GetRouteGeoJsons");
 
-			app.MapGet("/gpx/{name}", async Task<IResult> (
-				string name,
-				IGpxTrackStore store,
-				CancellationToken ct) =>
-				{
-					var content = await store.GetByNameAsync(name, ct);
-					return content is null
-							? TypedResults.NotFound($"GPX track '{name}' not found.")
-							: TypedResults.Content(content, "application/gpx+xml");
-				})
-				.WithName("GetGpxTrackByName");
+		app.MapGet("/routes/{id:int}/geojson", async Task<IResult> (
+			int id,
+			IDimRouteGeoJsonService service,
+			CancellationToken ct) =>
+			{
+				var document = await service.GetByIdAsync(id, ct);
+				return document is null
+						? TypedResults.NotFound($"Route '{id}' not found.")
+						: TypedResults.Content(document, "application/geo+json");
+			})
+			.WithName("GetRouteGeoJsonById");
 
-			app.Run();
+		app.Run();
 		}
 	}
 }

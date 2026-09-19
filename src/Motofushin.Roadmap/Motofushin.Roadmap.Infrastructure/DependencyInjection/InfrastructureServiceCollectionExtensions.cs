@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Motofushin.Roadmap.Application.Features.Gpx;
+using Motofushin.Roadmap.Application.Features.DimRoute;
 using Motofushin.Roadmap.Domain.DimRoute;
 using Motofushin.Roadmap.Infrastructure.Persistence;
 using Motofushin.Roadmap.Infrastructure.Persistence.Repositories;
-using Motofushin.Roadmap.Infrastructure.Services;
 
 namespace Motofushin.Roadmap.Infrastructure.DependencyInjection;
 
@@ -26,8 +25,7 @@ public static class InfrastructureServiceCollectionExtensions
 	{
 		ArgumentException.ThrowIfNullOrWhiteSpace(assetsPath);
 
-		services.AddSingleton<IGpxTrackStore>(sp =>
-				new FileSystemGpxTrackStore(assetsPath));
+		services.AddScoped<IDimRouteGeoJsonService, DimRouteGeoJsonService>();
 
 		services.AddDbContext<ScraperDwhDbContext>(options =>
 			options.UseNpgsql(configuration.GetConnectionString("Postgres")));
